@@ -221,7 +221,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
  "tauri-plugin-log",
  "tauri-plugin-sample",
 ]
@@ -654,7 +654,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
 ]
 
 [[package]]
@@ -664,7 +664,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
 ]
 
 [[package]]
@@ -674,7 +674,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
 ]
 
 [[package]]
@@ -6930,7 +6930,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
 ]
 
 [[package]]
@@ -8705,10 +8705,10 @@ dependencies = [
  "specta",
  "swift-rs",
  "tauri",
- "tauri-build",
- "tauri-macros",
- "tauri-runtime",
- "tauri-runtime-wry",
+ "tauri-build 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tauri-macros 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tauri-runtime 2.11.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tauri-runtime-wry 2.11.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "tauri-utils",
  "thiserror 2.0.12",
  "tokio",
@@ -8737,7 +8737,28 @@ dependencies = [
  "semver",
  "serde",
  "serde_json",
- "tauri-codegen",
+ "tauri-codegen 2.6.3",
+ "tauri-utils",
+ "tauri-winres",
+ "walkdir",
+]
+
+[[package]]
+name = "tauri-build"
+version = "2.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc9ce40b16101cb6ea63d3e221567affd1c3a9205f95d7bc574941a10636b632"
+dependencies = [
+ "anyhow",
+ "cargo_toml",
+ "dirs 6.0.0",
+ "glob",
+ "heck 0.5.0",
+ "json-patch",
+ "schemars",
+ "semver",
+ "serde",
+ "serde_json",
  "tauri-utils",
  "tauri-winres",
  "walkdir",
@@ -8907,6 +8928,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "tauri-codegen"
+version = "2.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "08279169ff42f8fc45a1dbc9dcae888893ba95288142e5880c59b93a26d2cfc5"
+dependencies = [
+ "base64 0.22.1",
+ "brotli",
+ "ico",
+ "json-patch",
+ "plist",
+ "png 0.17.16",
+ "proc-macro2",
+ "quote",
+ "semver",
+ "serde",
+ "serde_json",
+ "sha2",
+ "syn 2.0.117",
+ "tauri-utils",
+ "thiserror 2.0.12",
+ "time",
+ "url",
+ "uuid",
+ "walkdir",
+]
+
+[[package]]
 name = "tauri-driver"
 version = "2.0.6"
 dependencies = [
@@ -8933,7 +8981,7 @@ dependencies = [
  "serde",
  "serde_json",
  "tauri",
- "tauri-build",
+ "tauri-build 2.6.3",
  "url",
 ]
 
@@ -8977,7 +9025,21 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.117",
- "tauri-codegen",
+ "tauri-codegen 2.6.3",
+ "tauri-utils",
+]
+
+[[package]]
+name = "tauri-macros"
+version = "2.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8b394794f399a421811d06966343e7933fcae92d59f5180b9388d1174497a45"
+dependencies = [
+ "heck 0.5.0",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.117",
+ "tauri-codegen 2.6.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "tauri-utils",
 ]
 
@@ -9052,6 +9114,31 @@ dependencies = [
 ]
 
 [[package]]
+name = "tauri-runtime"
+version = "2.11.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0b4bc95aed361b0019067d189a1174a603d460d0f6c72606512d59fc9c12ec8"
+dependencies = [
+ "cookie",
+ "dpi",
+ "gtk",
+ "http 1.3.1",
+ "jni",
+ "objc2 0.6.4",
+ "objc2-ui-kit",
+ "objc2-web-kit",
+ "raw-window-handle",
+ "serde",
+ "serde_json",
+ "tauri-utils",
+ "thiserror 2.0.12",
+ "url",
+ "webkit2gtk",
+ "webview2-com",
+ "windows 0.61.1",
+]
+
+[[package]]
 name = "tauri-runtime-wry"
 version = "2.11.4"
 dependencies = [
@@ -9066,7 +9153,34 @@ dependencies = [
  "raw-window-handle",
  "softbuffer",
  "tao",
- "tauri-runtime",
+ "tauri-runtime 2.11.3",
+ "tauri-utils",
+ "tracing",
+ "url",
+ "webkit2gtk",
+ "webview2-com",
+ "windows 0.61.1",
+ "wry",
+]
+
+[[package]]
+name = "tauri-runtime-wry"
+version = "2.11.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4e6fac707727b7a2f48e4ded90976324267371073edbb415ffb73bb0458d203f"
+dependencies = [
+ "gtk",
+ "http 1.3.1",
+ "jni",
+ "log",
+ "objc2 0.6.4",
+ "objc2-app-kit",
+ "once_cell",
+ "percent-encoding",
+ "raw-window-handle",
+ "softbuffer",
+ "tao",
+ "tauri-runtime 2.11.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "tauri-utils",
  "tracing",
  "url",
