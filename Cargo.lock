@@ -1275,7 +1275,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "117725a109d387c937a1533ce01b450cbde6b88abceea8473c4d7a85853cda3c"
 dependencies = [
  "lazy_static",
- "windows-sys 0.48.0",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -1956,6 +1956,15 @@ name = "dirs"
 version = "6.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3e8aa94d75141228480295a7d0e7feb620b1a5ad9f12bc40be62411e38cce4e"
+dependencies = [
+ "dirs-sys 0.5.0",
+]
+
+[[package]]
+name = "dirs"
+version = "7.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d57d423b3c82e89b9a24ca3091fee61f456a26edbd28d26c65906f4bc1dcd8f"
 dependencies = [
  "dirs-sys 0.5.0",
 ]
@@ -4219,13 +4228,12 @@ dependencies = [
 
 [[package]]
 name = "keyboard-types"
-version = "0.7.0"
+version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b750dcadc39a09dbadd74e118f6dd6598df77fa01df0cfcdc52c28dece74528a"
+checksum = "0fbe853b403ae61a04233030ae8a79d94975281ed9770a1f9e246732b534b28d"
 dependencies = [
  "bitflags 2.7.0",
  "serde",
- "unicode-segmentation",
 ]
 
 [[package]]
@@ -4696,9 +4704,9 @@ dependencies = [
 
 [[package]]
 name = "muda"
-version = "0.19.1"
+version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0ae8844f63b5b118e334e205585b8c5c17b984121dbdb179d44aeb087ffad3cb"
+checksum = "cca139e57da4383727f189e43e66e84fa372347027fc996f9f1a007ec0a37996"
 dependencies = [
  "crossbeam-channel",
  "dpi",
@@ -4708,7 +4716,7 @@ dependencies = [
  "objc2 0.6.4",
  "objc2-app-kit",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "once_cell",
  "png 0.18.1",
  "serde",
@@ -5081,7 +5089,7 @@ version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "af1844ef2428cc3e1cb900be36181049ef3d3193c63e43026cfe202983b27a56"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 3.2.0",
  "proc-macro2",
  "quote",
  "syn 2.0.117",
@@ -5124,15 +5132,15 @@ dependencies = [
 
 [[package]]
 name = "objc2-app-kit"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5906f93257178e2f7ae069efb89fbd6ee94f0592740b5f8a1512ca498814d0fb"
+checksum = "d49e936b501e5c5bf01fda3a9452ff86dc3ea98ad5f283e1455153142d97518c"
 dependencies = [
  "bitflags 2.7.0",
  "block2 0.6.2",
  "objc2 0.6.4",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5143,7 +5151,7 @@ checksum = "6c1948a9be5f469deadbd6bcb86ad7ff9e47b4f632380139722f7d9840c0d42c"
 dependencies = [
  "bitflags 2.7.0",
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5153,26 +5161,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f860f8e841f6d32f754836f51e6bc7777cd7e7053cf18528233f6811d3eceb4"
 dependencies = [
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
 name = "objc2-core-foundation"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "daeaf60f25471d26948a1c2f840e3f7d86f4109e3af4e8e4b5cd70c39690d925"
+checksum = "2a180dd8642fa45cdb7dd721cd4c11b1cadd4929ce112ebd8b9f5803cc79d536"
 dependencies = [
  "bitflags 2.7.0",
+ "dispatch2",
  "objc2 0.6.4",
 ]
 
 [[package]]
 name = "objc2-core-graphics"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8dca602628b65356b6513290a21a6405b4d4027b8b250f0b98dddbb28b7de02"
+checksum = "e022c9d066895efa1345f8e33e584b9f958da2fd4cd116792e15e07e4720a807"
 dependencies = [
  "bitflags 2.7.0",
+ "dispatch2",
  "objc2 0.6.4",
  "objc2-core-foundation",
  "objc2-io-surface",
@@ -5185,7 +5195,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ffa6bea72bf42c78b0b34e89c0bafac877d5f80bf91e159a5d96ea7f693ca56"
 dependencies = [
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5195,7 +5205,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d31f4c5b5192304996badc466aeadffe1411d73a9bbd3b18b6b2ee9d048b07bd"
 dependencies = [
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5227,9 +5237,9 @@ dependencies = [
 
 [[package]]
 name = "objc2-foundation"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3a21c6c9014b82c39515db5b396f91645182611c97d24637cf56ac01e5f8d998"
+checksum = "e3e0adef53c21f888deb4fa59fc59f7eb17404926ee8a6f59f5df0fd7f9f3272"
 dependencies = [
  "bitflags 2.7.0",
  "block2 0.6.2",
@@ -5239,9 +5249,9 @@ dependencies = [
 
 [[package]]
 name = "objc2-io-surface"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "161a8b87e32610086e1a7a9e9ec39f84459db7b3a0881c1f16ca5a2605581c19"
+checksum = "180788110936d59bab6bd83b6060ffdfffb3b922ba1396b312ae795e1de9d81d"
 dependencies = [
  "bitflags 2.7.0",
  "objc2 0.6.4",
@@ -5282,7 +5292,7 @@ dependencies = [
  "bitflags 2.7.0",
  "objc2 0.6.4",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5300,7 +5310,7 @@ dependencies = [
  "objc2-core-graphics",
  "objc2-core-image",
  "objc2-core-location",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "objc2-quartz-core 0.3.0",
  "objc2-user-notifications",
 ]
@@ -5312,7 +5322,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "670fe793adbf3b5e93686d48a05a7ed7ee53dfa65d106ced4805fae8969059b2"
 dependencies = [
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5326,7 +5336,7 @@ dependencies = [
  "objc2 0.6.4",
  "objc2-app-kit",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
 ]
 
 [[package]]
@@ -5478,7 +5488,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d8fae84b431384b68627d0f9b3b1245fcf9f46f6c0e3dc902e9dce64edd1967"
 dependencies = [
  "libc",
- "windows-sys 0.48.0",
+ "windows-sys 0.60.2",
 ]
 
 [[package]]
@@ -8602,7 +8612,7 @@ dependencies = [
  "ndk-sys",
  "objc2 0.6.4",
  "objc2-app-kit",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "objc2-ui-kit",
  "once_cell",
  "parking_lot",
@@ -8677,7 +8687,7 @@ dependencies = [
  "muda",
  "objc2 0.6.4",
  "objc2-app-kit",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "objc2-ui-kit",
  "objc2-web-kit",
  "percent-encoding",
@@ -8996,7 +9006,7 @@ dependencies = [
  "fern",
  "log",
  "objc2 0.6.4",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "serde",
  "serde_json",
  "serde_repr",
@@ -9685,19 +9695,19 @@ dependencies = [
 
 [[package]]
 name = "tray-icon"
-version = "0.24.0"
+version = "0.25.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e47e6d063cfe4ad2e416fcbb310be3a37c5fd85c745b62cb562bfa4a003df674"
+checksum = "b2b9c52859a94554803ccd4a24b98f74148ebc73b90676d783f3490b1bff9d72"
 dependencies = [
  "crossbeam-channel",
- "dirs 6.0.0",
+ "dirs 7.0.0",
  "libappindicator",
  "muda",
  "objc2 0.6.4",
  "objc2-app-kit",
  "objc2-core-foundation",
  "objc2-core-graphics",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "once_cell",
  "png 0.18.1",
  "serde",
@@ -10521,7 +10531,7 @@ version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf221c93e13a30d793f7645a0e7762c55d169dbb0a49671918a2319d289b10bb"
 dependencies = [
- "windows-sys 0.48.0",
+ "windows-sys 0.59.0",
 ]
 
 [[package]]
@@ -10539,7 +10549,7 @@ dependencies = [
  "objc2 0.6.4",
  "objc2-app-kit",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "raw-window-handle",
  "windows-sys 0.59.0",
  "windows-version",
@@ -11136,7 +11146,7 @@ dependencies = [
  "objc2 0.6.4",
  "objc2-app-kit",
  "objc2-core-foundation",
- "objc2-foundation 0.3.0",
+ "objc2-foundation 0.3.2",
  "objc2-ui-kit",
  "objc2-web-kit",
  "once_cell",
