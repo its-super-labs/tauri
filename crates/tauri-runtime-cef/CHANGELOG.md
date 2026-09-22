@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0-alpha.3]
+
+### Bug Fixes
+
+- [`a5e9d3aa9`](https://www.github.com/tauri-apps/tauri/commit/a5e9d3aa936251834d0ac8282aece199e668a5e7) ([#16084](https://www.github.com/tauri-apps/tauri/pull/16084) by [@lucasfernog](https://www.github.com/tauri-apps/tauri/../../lucasfernog)) Fixed `Window::set_fullscreen` and `set_fullscreen_on_monitor` going wrong on macOS when called while the window was still animating its previous fullscreen transition: AppKit drops the toggle then, leaving the runtime's idea of the fullscreen state out of step with the window (a request to leave fullscreen was lost, and the next request to enter left it instead). Requests made during a transition are now applied once it ended.
+- [`a5e9d3aa9`](https://www.github.com/tauri-apps/tauri/commit/a5e9d3aa936251834d0ac8282aece199e668a5e7) ([#16084](https://www.github.com/tauri-apps/tauri/pull/16084) by [@lucasfernog](https://www.github.com/tauri-apps/tauri/../../lucasfernog)) Custom protocol handlers, the `ipc` handler included, now run on the main thread like they do with the wry runtime, instead of on a thread per request. Commands that wait on the main thread — creating a menu or a menu item, for one — deadlocked with the event loop delivering run events, and commands that dropped main-thread-only objects, such as removing a tray icon on macOS, crashed the app.
+
 ## [3.0.0-alpha.2]
 
 ### New Features
